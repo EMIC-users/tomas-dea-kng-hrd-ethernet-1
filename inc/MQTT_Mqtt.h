@@ -22,7 +22,6 @@ void MQTT_Mqtt_init(void);
 
 void MQTT_Mqtt_poll(void);
 
-void MQTT_Mqtt_publish(char* topic, char* payload);
 
 
 

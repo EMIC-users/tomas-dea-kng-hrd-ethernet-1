@@ -18,7 +18,7 @@
 
 void MQTT_Mqtt_onConnected()
 {
-    MQTT_Mqtt_publish("Motor-controller/", "1");
+    pI2C("AAABBB\t1");
 }
 
 

@@ -609,24 +609,6 @@ void MQTT_Mqtt_poll(void)
     }
 }
 
-void MQTT_Mqtt_publish(char* topic, char* payload)
-{
-    uint8_t h[4];
-    uint16_t tl = (uint16_t)strlen(topic);
-    uint16_t pl = (uint16_t)strlen(payload);
-    uint16_t rl = 2 + tl + pl;
-    uint8_t n;
-
-    if (state != ST_READY || rl > 16000)
-        return;                                 // QoS 0: descarte silencioso
-    if (pend_len + 3 + rl > MQ_PEND_SIZE)
-        return;
-    n = mq_fixhdr(h, 0x30, rl);
-    h[n++] = tl >> 8; h[n++] = tl & 0xFF;
-    mq_queue(h, n);
-    mq_queue((const uint8_t *)topic, tl);
-    mq_queue((const uint8_t *)payload, pl);
-}
 
 
 
