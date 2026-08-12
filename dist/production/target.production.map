@@ -256,19 +256,21 @@ Default Scalar Model: Small
 section                    address   length (PC units)   length (bytes) (dec)
 -------                    -------   -----------------   --------------------
 .text                        0x200              0x44e6          0x6759  (26457)
-.const                      0x46e6                0x60            0x90  (144)
-.text                       0x4746              0x1686          0x21c9  (8649)
-.dinit                      0x5dcc               0x1c4           0x2a6  (678)
-.text                       0x5f90                0x5c            0x8a  (138)
-.text                       0x5fec                0x14            0x1e  (30)
+.const                      0x46e6                0x30            0x48  (72)
+.text                       0x4716              0x15fa          0x20f7  (8439)
+.text                       0x5d10               0x2c0           0x420  (1056)
+.text                       0x5fd0                0x26            0x39  (57)
+.text                       0x5ff6                 0x8             0xc  (12)
 myFlashSpace                0x6000               0x400           0x600  (1536)
-.text                       0x6400               0x996           0xe61  (3681)
-.text                       0x6d96               0x4f8           0x774  (1908)
-.text                       0x728e                0x46            0x69  (105)
-.init.delay32               0x72d4                0x1c            0x2a  (42)
-.text                       0x72f0                0x16            0x21  (33)
+.text                       0x6400               0x43c           0x65a  (1626)
+.text                       0x683c               0x29a           0x3e7  (999)
+.dinit                      0x6ad6               0x1c4           0x2a6  (678)
+.text                       0x6c9a               0x554           0x7fe  (2046)
+.text                       0x71ee                0x20            0x30  (48)
+.init.delay32               0x720e                0x1c            0x2a  (42)
+.text                       0x722a                0x16            0x21  (33)
 
-                 Total "program" memory used (bytes):         0xa989  (43401) 66%
+                 Total "program" memory used (bytes):         0xa85d  (43101) 66%
 
 
 "data" Memory  [Origin = 0x800, Length = 0x2000]
@@ -489,133 +491,129 @@ External Symbols in Program Memory (by address):
                   0x004306                  _fmodl
                   0x004632                  _scalbnf
                   0x004686                  _scalbnl
-                  0x00473e                  _streamIn_I2C
-                  0x004742                  _streamOut_I2C
-                  0x00547c                  _MQTT_Mqtt_init
-                  0x00552a                  _MQTT_Mqtt_poll
-                  0x00578c                  _MQTT_Mqtt_publish
-                  0x005816                  _streamIn_t_ptr_to_float
-                  0x005852                  _streamIn_t_ptr_to_char
-                  0x00588c                  _streamIn_t_ptr_to_uint8_t
-                  0x0058ca                  _streamIn_t_ptr_to_uint16_t
-                  0x005906                  _streamIn_t_ptr_to_uint32_t
-                  0x005942                  _streamIn_t_ptr_to_uint64_t
-                  0x00597e                  _streamIn_t_ptr_to_int8_t
-                  0x0059bc                  _streamIn_t_ptr_to_int16_t
-                  0x0059f8                  _streamIn_t_ptr_to_int32_t
-                  0x005a34                  _streamIn_t_ptr_to_int64_t
-                  0x005a70                  _streamIn_t_ptr_to_ascii
-                  0x005ab0                  _sendDataToStream
-                  0x005f90                  _save
-                  0x005fbe                  _load
-                  0x005fec                  _MQTT_Mqtt_onConnected
-                  0x005ff8                  _LEDs_Led1_init
+                  0x00470e                  _streamIn_I2C
+                  0x004712                  _streamOut_I2C
+                  0x00544a                  _MQTT_Mqtt_init
+                  0x0054f8                  _MQTT_Mqtt_poll
+                  0x00575a                  _streamIn_t_ptr_to_float
+                  0x005796                  _streamIn_t_ptr_to_char
+                  0x0057d0                  _streamIn_t_ptr_to_uint8_t
+                  0x00580e                  _streamIn_t_ptr_to_uint16_t
+                  0x00584a                  _streamIn_t_ptr_to_uint32_t
+                  0x005886                  _streamIn_t_ptr_to_uint64_t
+                  0x0058c2                  _streamIn_t_ptr_to_int8_t
+                  0x005900                  _streamIn_t_ptr_to_int16_t
+                  0x00593c                  _streamIn_t_ptr_to_int32_t
+                  0x005978                  _streamIn_t_ptr_to_int64_t
+                  0x0059b4                  _streamIn_t_ptr_to_ascii
+                  0x0059f4                  _sendDataToStream
+                  0x005d10                  _Init_I2C_Driver
+                  0x005d1c                  _getAvailable_out_count
+                  0x005d30                  _countI2cStreamIn
+                  0x005d38                  _getI2cStreamIn
+                  0x005d40                  _setI2cStreamOut
+                  0x005d4c                  _I2C_Begin_Transmision
+                  0x005d66                  _ini_I2C_IN
+                  0x005d90                  _ini_I2C_OUT
+                  0x005dba                  _ini_I2C_OUT_FM
+                  0x005dc4                  _reset_I2C_FRAME
+                  0x005dd2                  _push_I2C_IN
+                  0x005e0a                  _push_I2C_OUT
+                  0x005e3a                  _pop_I2C_IN
+                  0x005e5e                  _pop_I2C_OUT
+                  0x005e82                  _pop_I2C_OUT_FM
+                  0x005e92                  _i2cCloseWriteFrame
+                  0x005ed4                  _i2cOpenReadFrame
+                  0x005f20                  _I2c_driver_callback_slave
+                  0x005f60                  _I2c_driver_callback_master
+                  0x005fd0                  _getSystemMilis
+                  0x005fda                  _callback
+                  0x005fec                  _systemTimeInit
+                  0x005ff6                  _LEDs_Led1_init
                   0x006000                  _myFlashMemory
                   0x006558                  _enc28j60_init
                   0x006662                  _enc28j60_revid
                   0x006670                  _enc28j60_link_up
                   0x00667e                  _enc28j60_send
                   0x006754                  _enc28j60_recv
-                  0x00683c                  _Init_I2C_Driver
-                  0x006848                  _getAvailable_out_count
-                  0x00685c                  _countI2cStreamIn
-                  0x006864                  _getI2cStreamIn
-                  0x00686c                  _setI2cStreamOut
-                  0x006878                  _I2C_Begin_Transmision
-                  0x006892                  _ini_I2C_IN
-                  0x0068bc                  _ini_I2C_OUT
-                  0x0068e6                  _ini_I2C_OUT_FM
-                  0x0068f0                  _reset_I2C_FRAME
-                  0x0068fe                  _push_I2C_IN
-                  0x006936                  _push_I2C_OUT
-                  0x006966                  _pop_I2C_IN
-                  0x00698a                  _pop_I2C_OUT
-                  0x0069ae                  _pop_I2C_OUT_FM
-                  0x0069be                  _i2cCloseWriteFrame
-                  0x006a00                  _i2cOpenReadFrame
-                  0x006a4c                  _I2c_driver_callback_slave
-                  0x006a8c                  _I2c_driver_callback_master
-                  0x006afc                  _SPI1_init
-                  0x006bfe                  _SPI1_enable
-                  0x006c06                  _SPI1_disable
-                  0x006c0e                  _xchangeSPI1b_8
-                  0x006c2c                  _xchangeSPI1b_16
-                  0x006c48                  _SPI1_clr
-                  0x006c5c                  _SPI1_send_async
-                  0x006c9a                  _SPI1_SetSpeed
-                  0x006d96                  _streamPushCtr
-                  0x006de4                  _streamPush
-                  0x006e1e                  _streamPop
-                  0x006e56                  _streamOpenWriteFrame
-                  0x006e98                  _streamOpenReadFrame
-                  0x006ee4                  _streamReOpenReadFrame
-                  0x006efc                  _streamCloseReadFrame
-                  0x006f26                  _flushProgramPutc3B
-                  0x006f40                  _putc_program3B
-                  0x006f74                  _ReadMem
-                  0x006fae                  _WriteMem
-                  0x00701e                  _ErasePage
-                  0x00705a                  _getc_program3B
-                  0x007088                  _Init_Master_I2C1
-                  0x0070f0                  _CollisionReset_I2C1
-                  0x0070f8                  _OverflowReset_I2C1
-                  0x007100                  _IsStartI2c1
-                  0x00710c                  _IsCollisionDetectI2c1
-                  0x007118                  _IsStopI2c1
-                  0x007124                  _IsReceiveBufferFullI2c1
-                  0x007130                  _IsDataOrAddressI2c1
-                  0x00713c                  _IsReceiveOverflowI2c1
-                  0x007148                  _Start_I2C1
-                  0x00715a                  _Stop_I2C1
-                  0x00716c                  _Write_I2C1
-                  0x007178                  _Read_I2C1
-                  0x00718c                  _pI2C
-                  0x0071a8                  _pI2C_ctrl
-                  0x0071c4                  _pI2C_boot
-                  0x0071e4                  _EMICBus_init
-                  0x0071f2                  _poll_EMICBus
-                  0x00728e                  _getSystemMilis
-                  0x007298                  _callback
-                  0x0072aa                  _systemTimeInit
-                  0x0072b4                  _initSystem
-                  0x0072c2                  _main
-                  0x0072d4                  ___delay32
-                  0x0072f0                  _timer4_init
+                  0x00683c                  _SPI1_init
+                  0x00693e                  _SPI1_enable
+                  0x006946                  _SPI1_disable
+                  0x00694e                  _xchangeSPI1b_8
+                  0x00696c                  _xchangeSPI1b_16
+                  0x006988                  _SPI1_clr
+                  0x00699c                  _SPI1_send_async
+                  0x0069da                  _SPI1_SetSpeed
+                  0x006c9a                  _streamPushCtr
+                  0x006ce8                  _streamPush
+                  0x006d22                  _streamPop
+                  0x006d5a                  _streamOpenWriteFrame
+                  0x006d9c                  _streamOpenReadFrame
+                  0x006de8                  _streamReOpenReadFrame
+                  0x006e00                  _streamCloseReadFrame
+                  0x006e2a                  _flushProgramPutc3B
+                  0x006e44                  _putc_program3B
+                  0x006e78                  _ReadMem
+                  0x006eb2                  _WriteMem
+                  0x006f22                  _ErasePage
+                  0x006f5e                  _getc_program3B
+                  0x006f8c                  _Init_Master_I2C1
+                  0x006ff4                  _CollisionReset_I2C1
+                  0x006ffc                  _OverflowReset_I2C1
+                  0x007004                  _IsStartI2c1
+                  0x007010                  _IsCollisionDetectI2c1
+                  0x00701c                  _IsStopI2c1
+                  0x007028                  _IsReceiveBufferFullI2c1
+                  0x007034                  _IsDataOrAddressI2c1
+                  0x007040                  _IsReceiveOverflowI2c1
+                  0x00704c                  _Start_I2C1
+                  0x00705e                  _Stop_I2C1
+                  0x007070                  _Write_I2C1
+                  0x00707c                  _Read_I2C1
+                  0x007090                  _pI2C
+                  0x0070ac                  _pI2C_ctrl
+                  0x0070c8                  _pI2C_boot
+                  0x0070e8                  _EMICBus_init
+                  0x0070f6                  _poll_EMICBus
+                  0x007192                  _save
+                  0x0071c0                  _load
+                  0x0071ee                  _initSystem
+                  0x0071fc                  _main
+                  0x00720e                  ___delay32
+                  0x00722a                  _timer4_init
 
 External Symbols in Program Memory (by name):
 
-                  0x0070f0                  _CollisionReset_I2C1
-                  0x0071e4                  _EMICBus_init
-                  0x00701e                  _ErasePage
-                  0x006878                  _I2C_Begin_Transmision
-                  0x006a8c                  _I2c_driver_callback_master
-                  0x006a4c                  _I2c_driver_callback_slave
-                  0x00683c                  _Init_I2C_Driver
-                  0x007088                  _Init_Master_I2C1
-                  0x00710c                  _IsCollisionDetectI2c1
-                  0x007130                  _IsDataOrAddressI2c1
-                  0x007124                  _IsReceiveBufferFullI2c1
-                  0x00713c                  _IsReceiveOverflowI2c1
-                  0x007100                  _IsStartI2c1
-                  0x007118                  _IsStopI2c1
-                  0x005ff8                  _LEDs_Led1_init
-                  0x00547c                  _MQTT_Mqtt_init
-                  0x005fec                  _MQTT_Mqtt_onConnected
-                  0x00552a                  _MQTT_Mqtt_poll
-                  0x00578c                  _MQTT_Mqtt_publish
-                  0x0070f8                  _OverflowReset_I2C1
-                  0x006f74                  _ReadMem
-                  0x007178                  _Read_I2C1
-                  0x006c9a                  _SPI1_SetSpeed
-                  0x006c48                  _SPI1_clr
-                  0x006c06                  _SPI1_disable
-                  0x006bfe                  _SPI1_enable
-                  0x006afc                  _SPI1_init
-                  0x006c5c                  _SPI1_send_async
-                  0x007148                  _Start_I2C1
-                  0x00715a                  _Stop_I2C1
-                  0x006fae                  _WriteMem
-                  0x00716c                  _Write_I2C1
+                  0x006ff4                  _CollisionReset_I2C1
+                  0x0070e8                  _EMICBus_init
+                  0x006f22                  _ErasePage
+                  0x005d4c                  _I2C_Begin_Transmision
+                  0x005f60                  _I2c_driver_callback_master
+                  0x005f20                  _I2c_driver_callback_slave
+                  0x005d10                  _Init_I2C_Driver
+                  0x006f8c                  _Init_Master_I2C1
+                  0x007010                  _IsCollisionDetectI2c1
+                  0x007034                  _IsDataOrAddressI2c1
+                  0x007028                  _IsReceiveBufferFullI2c1
+                  0x007040                  _IsReceiveOverflowI2c1
+                  0x007004                  _IsStartI2c1
+                  0x00701c                  _IsStopI2c1
+                  0x005ff6                  _LEDs_Led1_init
+                  0x00544a                  _MQTT_Mqtt_init
+                  0x0054f8                  _MQTT_Mqtt_poll
+                  0x006ffc                  _OverflowReset_I2C1
+                  0x006e78                  _ReadMem
+                  0x00707c                  _Read_I2C1
+                  0x0069da                  _SPI1_SetSpeed
+                  0x006988                  _SPI1_clr
+                  0x006946                  _SPI1_disable
+                  0x00693e                  _SPI1_enable
+                  0x00683c                  _SPI1_init
+                  0x00699c                  _SPI1_send_async
+                  0x00704c                  _Start_I2C1
+                  0x00705e                  _Stop_I2C1
+                  0x006eb2                  _WriteMem
+                  0x007070                  _Write_I2C1
                   0x0003b8                  __DefaultInterrupt
                   0x00032a                  __MI2C1Interrupt
                   0x000304                  __SI2C1Interrupt
@@ -625,7 +623,7 @@ External Symbols in Program Memory (by name):
                   0x000472                  ___addsf3
                   0x000472                  ___addsf3x
                   0x003350                  ___cvt_u
-                  0x0072d4                  ___delay32
+                  0x00720e                  ___delay32
                   0x00381e                  ___divdf3
                   0x003e70                  ___divdi3
                   0x00063c                  ___divsf3
@@ -720,9 +718,9 @@ External Symbols in Program Memory (by name):
                   0x000a62                  _atoi
                   0x000ac2                  _atol
                   0x000b2a                  _atoll
-                  0x007298                  _callback
+                  0x005fda                  _callback
                   0x0041c2                  _copysignl
-                  0x00685c                  _countI2cStreamIn
+                  0x005d30                  _countI2cStreamIn
                   0x006558                  _enc28j60_init
                   0x006670                  _enc28j60_link_up
                   0x006754                  _enc28j60_recv
@@ -730,75 +728,75 @@ External Symbols in Program Memory (by name):
                   0x00667e                  _enc28j60_send
                   0x0041f6                  _fabsl
                   0x00420c                  _floorl
-                  0x006f26                  _flushProgramPutc3B
+                  0x006e2a                  _flushProgramPutc3B
                   0x004306                  _fmodl
-                  0x006848                  _getAvailable_out_count
-                  0x006864                  _getI2cStreamIn
-                  0x00728e                  _getSystemMilis
-                  0x00705a                  _getc_program3B
-                  0x0069be                  _i2cCloseWriteFrame
-                  0x006a00                  _i2cOpenReadFrame
-                  0x006892                  _ini_I2C_IN
-                  0x0068bc                  _ini_I2C_OUT
-                  0x0068e6                  _ini_I2C_OUT_FM
-                  0x0072b4                  _initSystem
-                  0x005fbe                  _load
-                  0x0072c2                  _main
+                  0x005d1c                  _getAvailable_out_count
+                  0x005d38                  _getI2cStreamIn
+                  0x005fd0                  _getSystemMilis
+                  0x006f5e                  _getc_program3B
+                  0x005e92                  _i2cCloseWriteFrame
+                  0x005ed4                  _i2cOpenReadFrame
+                  0x005d66                  _ini_I2C_IN
+                  0x005d90                  _ini_I2C_OUT
+                  0x005dba                  _ini_I2C_OUT_FM
+                  0x0071ee                  _initSystem
+                  0x0071c0                  _load
+                  0x0071fc                  _main
                   0x000b8e                  _memcmp
                   0x000baa                  _memcpy
                   0x000bb8                  _memmove
                   0x000c38                  _memset
                   0x006000                  _myFlashMemory
-                  0x00718c                  _pI2C
-                  0x0071c4                  _pI2C_boot
-                  0x0071a8                  _pI2C_ctrl
-                  0x0071f2                  _poll_EMICBus
-                  0x006966                  _pop_I2C_IN
-                  0x00698a                  _pop_I2C_OUT
-                  0x0069ae                  _pop_I2C_OUT_FM
-                  0x0068fe                  _push_I2C_IN
-                  0x006936                  _push_I2C_OUT
-                  0x006f40                  _putc_program3B
-                  0x0068f0                  _reset_I2C_FRAME
-                  0x005f90                  _save
+                  0x007090                  _pI2C
+                  0x0070c8                  _pI2C_boot
+                  0x0070ac                  _pI2C_ctrl
+                  0x0070f6                  _poll_EMICBus
+                  0x005e3a                  _pop_I2C_IN
+                  0x005e5e                  _pop_I2C_OUT
+                  0x005e82                  _pop_I2C_OUT_FM
+                  0x005dd2                  _push_I2C_IN
+                  0x005e0a                  _push_I2C_OUT
+                  0x006e44                  _putc_program3B
+                  0x005dc4                  _reset_I2C_FRAME
+                  0x007192                  _save
                   0x004632                  _scalbnf
                   0x004686                  _scalbnl
-                  0x005ab0                  _sendDataToStream
-                  0x00686c                  _setI2cStreamOut
+                  0x0059f4                  _sendDataToStream
+                  0x005d40                  _setI2cStreamOut
                   0x000d00                  _snprintf
                   0x0035dc                  _strcpy
-                  0x006efc                  _streamCloseReadFrame
-                  0x00473e                  _streamIn_I2C
-                  0x005a70                  _streamIn_t_ptr_to_ascii
-                  0x005852                  _streamIn_t_ptr_to_char
-                  0x005816                  _streamIn_t_ptr_to_float
-                  0x0059bc                  _streamIn_t_ptr_to_int16_t
-                  0x0059f8                  _streamIn_t_ptr_to_int32_t
-                  0x005a34                  _streamIn_t_ptr_to_int64_t
-                  0x00597e                  _streamIn_t_ptr_to_int8_t
-                  0x0058ca                  _streamIn_t_ptr_to_uint16_t
-                  0x005906                  _streamIn_t_ptr_to_uint32_t
-                  0x005942                  _streamIn_t_ptr_to_uint64_t
-                  0x00588c                  _streamIn_t_ptr_to_uint8_t
-                  0x006e98                  _streamOpenReadFrame
-                  0x006e56                  _streamOpenWriteFrame
-                  0x004742                  _streamOut_I2C
-                  0x006e1e                  _streamPop
-                  0x006de4                  _streamPush
-                  0x006d96                  _streamPushCtr
-                  0x006ee4                  _streamReOpenReadFrame
+                  0x006e00                  _streamCloseReadFrame
+                  0x00470e                  _streamIn_I2C
+                  0x0059b4                  _streamIn_t_ptr_to_ascii
+                  0x005796                  _streamIn_t_ptr_to_char
+                  0x00575a                  _streamIn_t_ptr_to_float
+                  0x005900                  _streamIn_t_ptr_to_int16_t
+                  0x00593c                  _streamIn_t_ptr_to_int32_t
+                  0x005978                  _streamIn_t_ptr_to_int64_t
+                  0x0058c2                  _streamIn_t_ptr_to_int8_t
+                  0x00580e                  _streamIn_t_ptr_to_uint16_t
+                  0x00584a                  _streamIn_t_ptr_to_uint32_t
+                  0x005886                  _streamIn_t_ptr_to_uint64_t
+                  0x0057d0                  _streamIn_t_ptr_to_uint8_t
+                  0x006d9c                  _streamOpenReadFrame
+                  0x006d5a                  _streamOpenWriteFrame
+                  0x004712                  _streamOut_I2C
+                  0x006d22                  _streamPop
+                  0x006ce8                  _streamPush
+                  0x006c9a                  _streamPushCtr
+                  0x006de8                  _streamReOpenReadFrame
                   0x000d0c                  _strlen
                   0x000d9a                  _strtod
                   0x000d94                  _strtof
                   0x000da0                  _strtold
-                  0x0072aa                  _systemTimeInit
-                  0x0072f0                  _timer4_init
+                  0x005fec                  _systemTimeInit
+                  0x00722a                  _timer4_init
                   0x0026d4                  _tolower
                   0x0035ea                  _toupper
                   0x002154                  _vfprintf
                   0x000da4                  _vsnprintf
-                  0x006c2c                  _xchangeSPI1b_16
-                  0x006c0e                  _xchangeSPI1b_8
+                  0x00696c                  _xchangeSPI1b_16
+                  0x00694e                  _xchangeSPI1b_8
 
 Memory Configuration
 
@@ -2355,133 +2353,133 @@ myFlashSpace      0x006000        0x400
 .config_IESO      0x00abfc          0x2
  .config_IESO     0x00abfc          0x2 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/HRD_Ethernet_1/build/default/production/main.o
 
-.const              0xc6e6         0x60 load address 0x0046e6  
- .const             0xc6e6         0x30 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/HRD_Ethernet_1/build/default/production/userFncFile.o
- .const             0xc716         0x28 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/HRD_Ethernet_1/build/default/production/MQTT_Mqtt.o
- .const             0xc73e          0x8 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/HRD_Ethernet_1/build/default/production/I2C1_driver.o
-                    0xc73e                  _streamIn_I2C
-                    0xc742                  _streamOut_I2C
+.const              0xc6e6         0x30 load address 0x0046e6  
+ .const             0xc6e6         0x28 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/HRD_Ethernet_1/build/default/production/MQTT_Mqtt.o
+ .const             0xc70e          0x8 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/HRD_Ethernet_1/build/default/production/I2C1_driver.o
+                    0xc70e                  _streamIn_I2C
+                    0xc712                  _streamOut_I2C
 
-.text             0x004746       0x1686
- .text            0x004746       0x10d0 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/HRD_Ethernet_1/build/default/production/MQTT_Mqtt.o
-                  0x00547c                  _MQTT_Mqtt_init
-                  0x00552a                  _MQTT_Mqtt_poll
-                  0x00578c                  _MQTT_Mqtt_publish
- .text            0x005816        0x5b6 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/HRD_Ethernet_1/build/default/production/streamIn.o
-                  0x005816                  _streamIn_t_ptr_to_float
-                  0x005852                  _streamIn_t_ptr_to_char
-                  0x00588c                  _streamIn_t_ptr_to_uint8_t
-                  0x0058ca                  _streamIn_t_ptr_to_uint16_t
-                  0x005906                  _streamIn_t_ptr_to_uint32_t
-                  0x005942                  _streamIn_t_ptr_to_uint64_t
-                  0x00597e                  _streamIn_t_ptr_to_int8_t
-                  0x0059bc                  _streamIn_t_ptr_to_int16_t
-                  0x0059f8                  _streamIn_t_ptr_to_int32_t
-                  0x005a34                  _streamIn_t_ptr_to_int64_t
-                  0x005a70                  _streamIn_t_ptr_to_ascii
-                  0x005ab0                  _sendDataToStream
+.text             0x004716       0x15fa
+ .text            0x004716       0x1044 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/HRD_Ethernet_1/build/default/production/MQTT_Mqtt.o
+                  0x00544a                  _MQTT_Mqtt_init
+                  0x0054f8                  _MQTT_Mqtt_poll
+ .text            0x00575a        0x5b6 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/HRD_Ethernet_1/build/default/production/streamIn.o
+                  0x00575a                  _streamIn_t_ptr_to_float
+                  0x005796                  _streamIn_t_ptr_to_char
+                  0x0057d0                  _streamIn_t_ptr_to_uint8_t
+                  0x00580e                  _streamIn_t_ptr_to_uint16_t
+                  0x00584a                  _streamIn_t_ptr_to_uint32_t
+                  0x005886                  _streamIn_t_ptr_to_uint64_t
+                  0x0058c2                  _streamIn_t_ptr_to_int8_t
+                  0x005900                  _streamIn_t_ptr_to_int16_t
+                  0x00593c                  _streamIn_t_ptr_to_int32_t
+                  0x005978                  _streamIn_t_ptr_to_int64_t
+                  0x0059b4                  _streamIn_t_ptr_to_ascii
+                  0x0059f4                  _sendDataToStream
 
-.text             0x006400        0x996
+.text             0x006400        0x43c
  .text            0x006400        0x43c /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/HRD_Ethernet_1/build/default/production/enc28j60.o
                   0x006558                  _enc28j60_init
                   0x006662                  _enc28j60_revid
                   0x006670                  _enc28j60_link_up
                   0x00667e                  _enc28j60_send
                   0x006754                  _enc28j60_recv
- .text            0x00683c        0x2c0 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/HRD_Ethernet_1/build/default/production/I2C1_driver.o
-                  0x00683c                  _Init_I2C_Driver
-                  0x006848                  _getAvailable_out_count
-                  0x00685c                  _countI2cStreamIn
-                  0x006864                  _getI2cStreamIn
-                  0x00686c                  _setI2cStreamOut
-                  0x006878                  _I2C_Begin_Transmision
-                  0x006892                  _ini_I2C_IN
-                  0x0068bc                  _ini_I2C_OUT
-                  0x0068e6                  _ini_I2C_OUT_FM
-                  0x0068f0                  _reset_I2C_FRAME
-                  0x0068fe                  _push_I2C_IN
-                  0x006936                  _push_I2C_OUT
-                  0x006966                  _pop_I2C_IN
-                  0x00698a                  _pop_I2C_OUT
-                  0x0069ae                  _pop_I2C_OUT_FM
-                  0x0069be                  _i2cCloseWriteFrame
-                  0x006a00                  _i2cOpenReadFrame
-                  0x006a4c                  _I2c_driver_callback_slave
-                  0x006a8c                  _I2c_driver_callback_master
- .text            0x006afc        0x29a /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/HRD_Ethernet_1/build/default/production/spi1.o
-                  0x006afc                  _SPI1_init
-                  0x006bfe                  _SPI1_enable
-                  0x006c06                  _SPI1_disable
-                  0x006c0e                  _xchangeSPI1b_8
-                  0x006c2c                  _xchangeSPI1b_16
-                  0x006c48                  _SPI1_clr
-                  0x006c5c                  _SPI1_send_async
-                  0x006c9a                  _SPI1_SetSpeed
 
-.dinit            0x005dcc        0x1c4
- .dinit           0x005dcc        0x1c4 data_init
+.text             0x005d10        0x2c0
+ .text            0x005d10        0x2c0 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/HRD_Ethernet_1/build/default/production/I2C1_driver.o
+                  0x005d10                  _Init_I2C_Driver
+                  0x005d1c                  _getAvailable_out_count
+                  0x005d30                  _countI2cStreamIn
+                  0x005d38                  _getI2cStreamIn
+                  0x005d40                  _setI2cStreamOut
+                  0x005d4c                  _I2C_Begin_Transmision
+                  0x005d66                  _ini_I2C_IN
+                  0x005d90                  _ini_I2C_OUT
+                  0x005dba                  _ini_I2C_OUT_FM
+                  0x005dc4                  _reset_I2C_FRAME
+                  0x005dd2                  _push_I2C_IN
+                  0x005e0a                  _push_I2C_OUT
+                  0x005e3a                  _pop_I2C_IN
+                  0x005e5e                  _pop_I2C_OUT
+                  0x005e82                  _pop_I2C_OUT_FM
+                  0x005e92                  _i2cCloseWriteFrame
+                  0x005ed4                  _i2cOpenReadFrame
+                  0x005f20                  _I2c_driver_callback_slave
+                  0x005f60                  _I2c_driver_callback_master
 
-.text             0x006d96        0x4f8
- .text            0x006d96        0x190 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/HRD_Ethernet_1/build/default/production/stream.o
-                  0x006d96                  _streamPushCtr
-                  0x006de4                  _streamPush
-                  0x006e1e                  _streamPop
-                  0x006e56                  _streamOpenWriteFrame
-                  0x006e98                  _streamOpenReadFrame
-                  0x006ee4                  _streamReOpenReadFrame
-                  0x006efc                  _streamCloseReadFrame
- .text            0x006f26        0x162 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/HRD_Ethernet_1/build/default/production/Flash.o
-                  0x006f26                  _flushProgramPutc3B
-                  0x006f40                  _putc_program3B
-                  0x006f74                  _ReadMem
-                  0x006fae                  _WriteMem
-                  0x00701e                  _ErasePage
-                  0x00705a                  _getc_program3B
- .text            0x007088        0x104 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/HRD_Ethernet_1/build/default/production/I2C1.o
-                  0x007088                  _Init_Master_I2C1
-                  0x0070f0                  _CollisionReset_I2C1
-                  0x0070f8                  _OverflowReset_I2C1
-                  0x007100                  _IsStartI2c1
-                  0x00710c                  _IsCollisionDetectI2c1
-                  0x007118                  _IsStopI2c1
-                  0x007124                  _IsReceiveBufferFullI2c1
-                  0x007130                  _IsDataOrAddressI2c1
-                  0x00713c                  _IsReceiveOverflowI2c1
-                  0x007148                  _Start_I2C1
-                  0x00715a                  _Stop_I2C1
-                  0x00716c                  _Write_I2C1
-                  0x007178                  _Read_I2C1
- .text            0x00718c        0x102 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/HRD_Ethernet_1/build/default/production/EMICBus.o
-                  0x00718c                  _pI2C
-                  0x0071a8                  _pI2C_ctrl
-                  0x0071c4                  _pI2C_boot
-                  0x0071e4                  _EMICBus_init
-                  0x0071f2                  _poll_EMICBus
+.text             0x00683c        0x29a
+ .text            0x00683c        0x29a /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/HRD_Ethernet_1/build/default/production/spi1.o
+                  0x00683c                  _SPI1_init
+                  0x00693e                  _SPI1_enable
+                  0x006946                  _SPI1_disable
+                  0x00694e                  _xchangeSPI1b_8
+                  0x00696c                  _xchangeSPI1b_16
+                  0x006988                  _SPI1_clr
+                  0x00699c                  _SPI1_send_async
+                  0x0069da                  _SPI1_SetSpeed
 
-.text             0x005f90         0x5c
- .text            0x005f90         0x5c /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/HRD_Ethernet_1/build/default/production/Persist.o
-                  0x005f90                  _save
-                  0x005fbe                  _load
+.dinit            0x006ad6        0x1c4
+ .dinit           0x006ad6        0x1c4 data_init
 
-.text             0x00728e         0x46
- .text            0x00728e         0x26 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/HRD_Ethernet_1/build/default/production/systemTimer.o
-                  0x00728e                  _getSystemMilis
-                  0x007298                  _callback
-                  0x0072aa                  _systemTimeInit
- .text            0x0072b4         0x20 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/HRD_Ethernet_1/build/default/production/main.o
-                  0x0072b4                  _initSystem
-                  0x0072c2                  _main
+.text             0x006c9a        0x554
+ .text            0x006c9a        0x190 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/HRD_Ethernet_1/build/default/production/stream.o
+                  0x006c9a                  _streamPushCtr
+                  0x006ce8                  _streamPush
+                  0x006d22                  _streamPop
+                  0x006d5a                  _streamOpenWriteFrame
+                  0x006d9c                  _streamOpenReadFrame
+                  0x006de8                  _streamReOpenReadFrame
+                  0x006e00                  _streamCloseReadFrame
+ .text            0x006e2a        0x162 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/HRD_Ethernet_1/build/default/production/Flash.o
+                  0x006e2a                  _flushProgramPutc3B
+                  0x006e44                  _putc_program3B
+                  0x006e78                  _ReadMem
+                  0x006eb2                  _WriteMem
+                  0x006f22                  _ErasePage
+                  0x006f5e                  _getc_program3B
+ .text            0x006f8c        0x104 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/HRD_Ethernet_1/build/default/production/I2C1.o
+                  0x006f8c                  _Init_Master_I2C1
+                  0x006ff4                  _CollisionReset_I2C1
+                  0x006ffc                  _OverflowReset_I2C1
+                  0x007004                  _IsStartI2c1
+                  0x007010                  _IsCollisionDetectI2c1
+                  0x00701c                  _IsStopI2c1
+                  0x007028                  _IsReceiveBufferFullI2c1
+                  0x007034                  _IsDataOrAddressI2c1
+                  0x007040                  _IsReceiveOverflowI2c1
+                  0x00704c                  _Start_I2C1
+                  0x00705e                  _Stop_I2C1
+                  0x007070                  _Write_I2C1
+                  0x00707c                  _Read_I2C1
+ .text            0x007090        0x102 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/HRD_Ethernet_1/build/default/production/EMICBus.o
+                  0x007090                  _pI2C
+                  0x0070ac                  _pI2C_ctrl
+                  0x0070c8                  _pI2C_boot
+                  0x0070e8                  _EMICBus_init
+                  0x0070f6                  _poll_EMICBus
+ .text            0x007192         0x5c /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/HRD_Ethernet_1/build/default/production/Persist.o
+                  0x007192                  _save
+                  0x0071c0                  _load
 
-.init.delay32     0x0072d4         0x1c
- .init.delay32    0x0072d4         0x1c /opt/microchip/xc16/v2.10/bin/bin/../../lib/libc99-pic30-elf.a(delay32.Meo)
-                  0x0072d4                  ___delay32
+.text             0x005fd0         0x26
+ .text            0x005fd0         0x26 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/HRD_Ethernet_1/build/default/production/systemTimer.o
+                  0x005fd0                  _getSystemMilis
+                  0x005fda                  _callback
+                  0x005fec                  _systemTimeInit
 
-.text             0x0072f0         0x16
- .text            0x0072f0         0x16 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/HRD_Ethernet_1/build/default/production/timer.o
-                  0x0072f0                  _timer4_init
+.text             0x0071ee         0x20
+ .text            0x0071ee         0x20 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/HRD_Ethernet_1/build/default/production/main.o
+                  0x0071ee                  _initSystem
+                  0x0071fc                  _main
 
-.text             0x005fec         0x14
- .text            0x005fec          0xc /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/HRD_Ethernet_1/build/default/production/userFncFile.o
-                  0x005fec                  _MQTT_Mqtt_onConnected
- .text            0x005ff8          0x8 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/HRD_Ethernet_1/build/default/production/led_Led1.o
-                  0x005ff8                  _LEDs_Led1_init
+.init.delay32     0x00720e         0x1c
+ .init.delay32    0x00720e         0x1c /opt/microchip/xc16/v2.10/bin/bin/../../lib/libc99-pic30-elf.a(delay32.Meo)
+                  0x00720e                  ___delay32
+
+.text             0x00722a         0x16
+ .text            0x00722a         0x16 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/HRD_Ethernet_1/build/default/production/timer.o
+                  0x00722a                  _timer4_init
+
+.text             0x005ff6          0x8
+ .text            0x005ff6          0x8 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/HRD_Ethernet_1/build/default/production/led_Led1.o
+                  0x005ff6                  _LEDs_Led1_init
