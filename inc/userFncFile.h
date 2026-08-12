@@ -11,8 +11,5 @@
 #include "streamOut.h"
 #include "streamIn.h"
 
-/* Function Prototypes */
-void MQTT_Mqtt_onConnected();
-
 #endif /* USERFNCFILE_H */
 

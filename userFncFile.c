@@ -16,10 +16,4 @@
 #include "inc/MQTT_Mqtt.h"
 #include "inc/Persist.h"
 
-void MQTT_Mqtt_onConnected()
-{
-    MQTT_Mqtt_publish("1", "Motor-controller/da1248d2-2283-4/upload/PROBE");
-}
-
-
 
