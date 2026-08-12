@@ -18,7 +18,7 @@
 
 void MQTT_Mqtt_onConnected()
 {
-    MQTT_Mqtt_publish("Motor-controller/da1248d2-2283-4/upload/PROBE\t1");
+    MQTT_Mqtt_publish("1", "Motor-controller/da1248d2-2283-4/upload/PROBE");
 }
 
 
