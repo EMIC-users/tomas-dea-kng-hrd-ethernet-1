@@ -25,7 +25,6 @@ void MQTT_Mqtt_poll(void);
 
 
 
-extern void MQTT_Mqtt_onConnected(void);
 
 
 #endif

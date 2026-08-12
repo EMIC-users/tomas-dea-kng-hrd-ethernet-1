@@ -16,10 +16,4 @@
 #include "inc/MQTT_Mqtt.h"
 #include "inc/Persist.h"
 
-void MQTT_Mqtt_onConnected()
-{
-    pI2C("AAABBB\t1");
-}
-
-
 

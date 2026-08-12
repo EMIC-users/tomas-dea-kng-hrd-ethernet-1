@@ -386,7 +386,6 @@ static void mq_packet(const uint8_t *p, uint8_t hdr, uint16_t rl)
         if (rl >= 2 && v[1] == 0) {
             state   = ST_READY;
             t_lasttx = getSystemMilis();
-            MQTT_Mqtt_onConnected();
         } else {
             conn_down();                        // broker rechazo la sesion
         }
