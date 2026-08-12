@@ -1,0 +1,17 @@
+#pragma config POSCMOD = NONE 		// Primary Oscillator Select (Primary oscillator disabled)
+#pragma config I2C1SEL = SEC 		// I2C1 Pin Location Select (Use alternate SCL1/SDA1 pins)
+#pragma config IOL1WAY = ON 		// IOLOCK Protection (Once IOLOCK is set, cannot be changed)
+#pragma config OSCIOFNC = ON 		// use RA3 as I/O; Primary Oscillator Output Function
+#pragma config FCKSM = CSDCMD 		// Clock Switching and Monitor disabled
+#pragma config FNOSC = FRCPLL 		// Fast RC Oscillator with PLL (FOSC 32 MHz)
+#pragma config SOSCSEL = SOSC 		// Default Secondary Oscillator
+#pragma config WUTSEL = LEG 		// Legacy Wake-up Timer
+#pragma config IESO = OFF 			// Two-Speed Start-up disabled
+#pragma config WDTPS = PS32768 		// Watchdog Timer Postscaler 1:32768
+#pragma config FWPSA = PR128 		// WDT Prescaler 1:128
+#pragma config WINDIS = OFF 		// Windowed Watchdog disabled
+#pragma config FWDTEN = OFF 		// Watchdog Timer disabled
+#pragma config ICS = PGx1 			// Debug por PGC1/PGD1
+#pragma config GWRP = OFF 			// Sin write protect
+#pragma config GCP = OFF 			// Sin code protect
+#pragma config JTAGEN = OFF 		// JTAG deshabilitado

@@ -1,0 +1,213 @@
+
+//-------------- Hardware Config ---------------------
+
+//------------------- Process EMIC-Generate files result ----------------
+
+// Functions:
+
+
+// Events:
+
+
+//------------------- APIs -----------------------
+
+// LED de estado
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Emitido solo cuando la instancia tiene id asignado (build real); en la
+// discovery "bare" module.Id no esta definido (mismo patron que HRD_USB_SD).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Protocolo del módulo: config BLOQUEANTE de instancia (Configurator estándar,
+// como ModbusMode). Excluyente en v1: un firmware es Modbus O MQTT — comparten
+// el unico recv del ENC28J60, coexistir requeriria un demux comun (v2).
+
+
+// Cliente MQTT 3.1.1 (ENC28J60 por SPI1, broker local o via gateway, QoS 0)
+
+// Cliente MQTT 3.1.1 minimalista sobre ENC28J60: QoS 0, clean session, sin
+// TLS/DNS; auth usuario/clave opcional (username vacio = conexion anonima).
+// El broker puede estar en la LAN o fuera de la subred (se
+// rutea via gateway: el ARP resuelve el next-hop segun netmask), publica y
+// se suscribe a topics. Reconexion sola con backoff; onConnected se dispara
+// en CADA (re)conexion — suscribirse ahi.
+// Config de red y sesion: @var persistentes (mismo patron que ModbusTCP);
+// llamar loadVars en SystemConfig para aplicar la config guardada.
+
+
+
+
+
+
+// --- Configuración de red y sesión (variables de la API, @var persistentes) ---
+// El init parsea ip/mac/brokerIp/netmask/gateway (texto) y toma
+// brokerPort/clientId; texto inválido => defaults de fábrica. Se aplican
+// en el reset (loadVars en SystemConfig las restaura antes de los inits).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Persistencia en flash interna de las variables persist_ (config de red del
+// protocolo elegido). Expone saveVars/loadVars al integrador.
+
+
+
+
+
+
+
+
+
+//-------------------- main  -----------------------
+
+
+
+
+
+
+
+
+
+
+
+//------------------- Copy EMIC-Generate files result ----------------
+
+//------------------- Set userFncFile.c as a compiler module ----------------
+
+//------------------- Add all compiler modules to the project ----------------
+
